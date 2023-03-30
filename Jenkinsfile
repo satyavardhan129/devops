@@ -8,9 +8,9 @@ pipeline {
 
     options {
                 timestamps()
-                buildDiscarder(logRotator(numToKeepStr: '2', artifactNumToKeepStr: '2'))
+                buildDiscarder(logRotator(numToKeepStr: '5', artifactNumToKeepStr: '2'))
                 timeout(time: 240, unit: 'MINUTES')
-                disableConcurrentBuilds()
+               // disableConcurrentBuilds()
                 }
 
         stages {

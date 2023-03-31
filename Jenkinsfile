@@ -31,7 +31,7 @@ pipeline {
     
             }
 
-            stage ('Docker Build && Push && RUN ') {
+            stage ('Docker Build && Push && DEPLOY ') {
                
 
                 steps {

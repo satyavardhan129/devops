@@ -36,10 +36,10 @@ pipeline {
 
                 steps {
                      
-                    sh 'docker build . -t satyavardhan129/demo29:latest '
+                    sh 'docker build . -t satyavardhan129/app29:latest '
                     sh 'docker login -u satyavardhan129 -p dckr_pat_rDGKM9Tj1XraOUGr2qfKslzrPZ4 '
-                    sh 'docker push satyavardhan129/demo29:latest'
-                    sh 'docker run -p 89:8080 -d satyavardhan129/demo29:latest'
+                    sh 'docker push satyavardhan129/app29:latest'
+                    sh 'docker run -p 89:8080 -d satyavardhan129/app29:latest'
                 
 
                 }

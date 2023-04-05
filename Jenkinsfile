@@ -17,7 +17,7 @@ pipeline {
             stage ('AppCodeCheckout') {
                 steps {
 
-                    git 'https://github.com/gcpcloudreddy/pylife-devops-demo.git'
+                    git 'https://https://github.com/satyavardhan129/devops.git'
 
                 }
             }
@@ -35,14 +35,12 @@ pipeline {
                
 
                 steps {
-                    withCredentials([string(credentialsId: 'DOCKERPWD', variable: 'DOCKER_TOKEN')]) {
-
-
-                    sh 'docker build . -t pylifedevops/app30:test'
-                    sh 'docker login -u pylifedevops -p ${DOCKER_TOKEN}'
-                    sh 'docker push pylifedevops/app30:test'
-                   // sh 'docker run -p 89:8080 -d pylifedevops/app30:test'
-                }
+                     
+                    sh 'docker build . -t satyavardhan129/demo29:latest '
+                    sh 'docker login -u satyavardhan129 -p dckr_pat_rDGKM9Tj1XraOUGr2qfKslzrPZ4 '
+                    sh 'docker push satyavardhan129/demo29:latest'
+                   // sh 'docker run -p 89:8080 -d satyavardhan129/demo29:latest'
+                
 
                 }
             
